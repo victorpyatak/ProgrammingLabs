@@ -1,0 +1,5 @@
+#ignores all .exe files , hope so
+*.exe
+
+#ignores all .txt files
+*.exe
