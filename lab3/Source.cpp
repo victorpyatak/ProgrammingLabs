@@ -43,7 +43,7 @@ void printGeometricalAverage() {
 	int matrixRows, matrixColumns;
 	int mult;
 	float result = 1.0,
-		  sum = 0.0,
+		  geometricalAverageSum = 0.0,
 		  counter = 0.0;
 
 	for (matrixRows = 0; matrixRows < rows; matrixRows++) {
@@ -56,7 +56,7 @@ void printGeometricalAverage() {
 			else if ((matrixColumns == matrixRows) && (result != 1.0)) {
 				cout << "Average geometrical of row " << matrixRows << " is :";
 				cout << pow(result, 1 / counter) << endl << endl;
-				sum += pow(result, 1 / counter);
+				geometricalAverageSum += pow(result, 1 / counter);
 				result = 1.0;
 				counter = 0.0;
 			}
@@ -64,21 +64,21 @@ void printGeometricalAverage() {
 		}
 
 	}
-	cout << "The sum is :" << sum << endl << endl;
+	cout << "The geometricalAverageSum is :" << geometricalAverageSum << endl << endl;
 }
 
 void insertionSort() {
-	int matrixRows, matrixColumns, temp, Void;
+	int matrixRows, matrixColumns, temporary, Void;
 	cout << "Sorted matrix :" << endl;
 	for (matrixColumns = 0; matrixColumns < cols; matrixColumns++) {
 		for (matrixRows = 1; matrixRows < rows; matrixRows++) {
-			temp = matrix[matrixRows][matrixColumns];
+			temporary = matrix[matrixRows][matrixColumns];
 			Void = matrixRows - 1;
-			while ((temp < matrix[Void][matrixColumns]) && (Void >= 0)) {
+			while ((temporary < matrix[Void][matrixColumns]) && (Void >= 0)) {
 				matrix[Void + 1][matrixColumns] = matrix[Void][matrixColumns];
 				Void = Void - 1;
 			}
-		matrix[Void+1][matrixColumns] = temp;
+		matrix[Void+1][matrixColumns] = temporary;
 
 		}
 	}
