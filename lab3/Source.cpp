@@ -39,7 +39,7 @@ void printDiagonal() {
 	cout << endl;
 }
 
-void geomAvg() {
+void printGeometricalAverage() {
 	int matrixRows, matrixColumns;
 	int mult;
 	float result = 1.0,
@@ -67,7 +67,7 @@ void geomAvg() {
 	cout << "The sum is :" << sum << endl << endl;
 }
 
-void sorted() {
+void insertionSort() {
 	int matrixRows, matrixColumns, temp, Void;
 	cout << "Sorted matrix :" << endl;
 	for (matrixColumns = 0; matrixColumns < cols; matrixColumns++) {
@@ -95,7 +95,7 @@ int main() {
 	//checkMatrix();
 	addDataToMatrix();
 	printDiagonal();
-	geomAvg();
-	sorted();
+	printGeometricalAverage();
+	insertionSort();
 	return 0;
 }
