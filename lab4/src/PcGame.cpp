@@ -10,68 +10,68 @@ PcGame::PcGame()
 	cout << "This is the first constructor!" << endl;
 }
 
-PcGame::PcGame(string n, int c, double a) :
-	name(n), heroCap(c), avg(a)
+PcGame::PcGame(string name, int capacity, double avgRating) :
+	gameName(name), heroCapacity(capacity), averageRating(avgRating)
 {
-	cout << "Name set in constructor :" << name << endl;
-	cout << "Hero capacity set in constructor : " << heroCap << endl;
-	cout << "Average IMDB rating set in constructor : " << avg << endl;
+	cout << "gameName set in constructor :" << gameName << endl;
+	cout << "Hero capacity set in constructor : " << heroCapacity << endl;
+	cout << "Average IMDB rating set in constructor : " << averageRating << endl;
 }
 
-PcGame::PcGame(string ps , int pi):
-	proStr(ps) , proInt(pi)
+PcGame::PcGame(string protString , int protInt):
+	protectedString(protString) , protectedInteger(protInt)
 {
-	cout << "Protected string from constructor :" << proStr << endl;
-	cout << "Protected integer from constructor :" << proInt << endl;
+	cout << "Protected string from constructor :" << protectedString << endl;
+	cout << "Protected integer from constructor :" << protectedInteger << endl;
 }
 
-PcGame::PcGame(int pi, string ps) :
-	pubInt(pi), pubStr(ps)
+PcGame::PcGame(int protInt, string protString) :
+	publicInteger(protInt), publicString(protString)
 {
-	cout << "Public integer :" << pubInt << endl;
-	cout << "Public string :" << pubStr << endl;
+	cout << "Public integer :" << publicInteger << endl;
+	cout << "Public string :" << publicString << endl;
 }
 
-string PcGame::getName() {
-	return name;
-}
-
-
-void PcGame::setName(string n) {
-	name = n;
-}
-
-int PcGame::getCap() {
-	return heroCap;
-}
-
-void PcGame::setCap(int c) {
-	heroCap = c;
+string PcGame::getGameName() {
+	return gameName;
 }
 
 
-double PcGame::getAvg() {
-	return avg;
+void PcGame::setGameName(string name) {
+	gameName = name;
 }
 
-void PcGame::setAvg(double a) {
-	avg = a;
+int PcGame::getHeroCapacity() {
+	return heroCapacity;
 }
 
-string PcGame::getProStr() {
-	return proStr;
+void PcGame::setHeroCapacity(int capacity) {
+	heroCapacity = capacity;
 }
 
-void PcGame::setProStr(string ps) {
-	proStr = ps;
+
+double PcGame::getAverageRating() {
+	return averageRating;
 }
 
-int PcGame::getProInt() {
-	return proInt;
+void PcGame::setAverageRating(double avgRating) {
+	averageRating = avgRating;
 }
 
-void PcGame::setProInt(int pi) {
-	proInt = pi;
+string PcGame::getProtectedString() {
+	return protectedString;
+}
+
+void PcGame::setProtectedString(string protString) {
+	protectedString = protString;
+}
+
+int PcGame::getProtectedInteger() {
+	return protectedInteger;
+}
+
+void PcGame::setProtectedInteger(int protInt) {
+	protectedInteger = protInt;
 }
 
 PcGame::~PcGame()

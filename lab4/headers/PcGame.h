@@ -8,34 +8,34 @@ class PcGame
 {
 public:
 	PcGame();
-	PcGame(string n, int c, double a);
-	PcGame(string ps , int pi);
-	PcGame(int pi, string ps);
+	PcGame(string name, int capacity, double avgRating);
+	PcGame(string protString , int protInt);
+	PcGame(int protInt, string protString);
 
-	void setName(string n);
-	string getName();
-	void setCap(int cap);
-	int getCap();
-	void setAvg(double avg);
-	double getAvg();
+	void setGameName(string name);
+	string getGameName();
+	void setHeroCapacity(int cap);
+	int getHeroCapacity();
+	void setAverageRating(double averageRating);
+	double getAverageRating();
 
-	void setProStr(string ps);
-	string getProStr();
-	void setProInt(int pi);
-	int getProInt();
+	void setProtectedString(string protString);
+	string getProtectedString();
+	void setProtectedInteger(int protInt);
+	int getProtectedInteger();
 
-	int pubInt;
-	string pubStr;
+	int publicInteger;
+	string publicString;
 
 	~PcGame();
 private:
-	string name;
-	int heroCap;
-	double avg;
+	string gameName;
+	int heroCapacity;
+	double averageRating;
 
 protected:
-	string proStr;
-	int proInt;
+	string protectedString;
+	int protectedInteger;
 
 };
 
