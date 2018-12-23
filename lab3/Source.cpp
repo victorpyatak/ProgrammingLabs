@@ -5,7 +5,11 @@
 
 using namespace std;
 
-int rows, cols, matrix[5][5];
+const int ROWSLIMIT = 5;
+const int COLSLIMIT = 5;
+matrix[ROWS][COLS];
+
+int cols, rows;
 
 
 void addRowsAndCols() {
@@ -16,7 +20,7 @@ void addRowsAndCols() {
 }
 
 void checkMatrix() {
-	while (rows != 5 || cols != 5) {
+	while (rows != ROWSLIMIT || cols != COLSLIMIT) {
 		cout << "\nWARNING!" << endl << "There must be 5 rows and 5 cols" << endl << endl;
 		addRowsAndCols();
 	}
